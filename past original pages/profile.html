@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/script.js" defer></script>
+    <script src="js/selectbox.js" defer></script>
+    <script src="js/swiper.js" defer></script>
+    <script src="js/accordion.js" defer></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <title>Citron Bank</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_container container">
+            <a href="index.html" class="logotype_box">
+                <img src="img/logos/Citron Bank_Full Logotype.svg" alt="" class="logotype_img">
+                <!-- <svg class="logotype_img" width="238" height="239" viewBox="0 0 238 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_46_76)">
+                        <path d="M209.85 133.23C204.11 171.46 174.91 202.02 137.38 209.77V191.74C148.25 188.94 158.16 183.76 166.53 176.8L144.3 157.93C136.95 162.81 128.14 165.66 118.66 165.66C93.03 165.66 72.26 144.88 72.26 119.26C72.26 93.64 93.04 72.86 118.66 72.86C128.17 72.86 137.01 75.72 144.37 80.63L166.59 61.77C158.21 54.78 148.28 49.58 137.38 46.78V29.06C172.06 36.23 199.62 62.85 208.14 97.01H235.92C225.44 41.77 176.91 0 118.61 0C60.31 0 11.79 41.77 1.31 97.01H29.09C37.72 62.42 65.87 35.55 101.17 28.79V46.45C68.27 54.33 43.8 83.93 43.8 119.25C43.8 154.57 68.26 184.17 101.17 192.05V210.03C63 202.72 33.19 171.91 27.38 133.23H0C6.85 192.67 57.34 238.83 118.61 238.83C179.88 238.83 230.38 192.67 237.22 133.23H209.84H209.85Z" fill=""/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_46_76">
+                            <rect width="237.23" height="238.83" fill=""/>
+                        </clipPath>
+                    </defs>
+                </svg> -->
+                <!-- <p class="logotype-name">
+                    Citron Bank
+                </p> -->
+            </a>
+            <ul class="menu">
+                <li><a href="cards.html" class="menu_link">Кредитные карты</a></li>
+                <li><a href="cards.html" class="menu_link">Дебетовые карты</a></li>
+                <li><a href="#" class="menu_link">Премиум</a></li>
+            </ul>
+            <!-- <div class="buttons_block">
+                <a href="#" class="button_style auth_btn">Войти</a>
+            </div> -->
+            <div class="profile_menu">
+                <div class="profile_buttons">
+                    <div class="user_payment">
+                        00 000,00 ₽
+                    </div>
+                    <div class="user_profile_box">
+                        <div class="user_img_box">
+                            <img src="img/profile/Glass_Logo_Render 5.png" alt="" class="user_img">
+                        </div>
+                        <svg class="profile_arrow arrow_icon" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.83824 1.62443L5.32362 5.1609C5.10794 5.37791 4.75827 5.37791 4.54259 5.1609L1.02797 1.62443C0.812292 1.40741 0.812292 1.05556 1.02797 0.838543C1.24364 0.621527 1.59332 0.621527 1.809 0.838543L4.60959 3.65655L5.25662 3.65655L8.05722 0.838543C8.27289 0.621527 8.62257 0.621527 8.83824 0.838543C9.05392 1.05556 9.05392 1.40741 8.83824 1.62443Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="submenu_profile">
+                    <li>
+                        <a href="profile.html" class="submenu_link">
+                            <div class="submenu_image_box">
+                                <img src="img/icons/Profile-icon.svg" alt="" class="submenu_img">
+                            </div>
+                            <p class="submenu_link-text">
+                                Личный кабинет
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu_link">
+                            <div class="submenu_image_box">
+                                <img src="img/icons/setting-icon.svg" alt="" class="submenu_img">
+                            </div>
+                            <p class="submenu_link-text">
+                                Настройки
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?do=exit" class="submenu_link exit_link">
+                            <div class="submenu_image_box">
+                                <svg class="submenu_img exit-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.77778 16H14.2222C15.2027 16 16 15.2027 16 14.2222V1.77778C16 0.797333 15.2027 0 14.2222 0H1.77778C0.797333 0 0 0.797333 0 1.77778V7.112H6.22044V3.55556L11.5538 8L6.22044 12.4444V8.88978H0V14.2222C0 15.2027 0.797333 16 1.77778 16Z" fill=""/>
+                                </svg>
+                            </div>
+                            <p class="submenu_link-text">
+                                Выйти
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="news_block">
+            <div class="news_container">
+                <div class="swiper news-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper news-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide news-slide">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide news-slide">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Mask group.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide news-slide">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/main-images/3D-Icon-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide news-slide">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/main-images/main-cards.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide news-slide">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide news-slide">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide news-slide">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                      </div>
+                  
+                      
+                    </div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                  
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                  
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                  </div>
+                <!-- <div class="news_swiper">
+                    <div class="swiper">
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+        
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+        
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+        
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+        
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+        
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+        
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+        
+                        <a href="#" class="news">
+                            <div class="news_text-content">
+                                <p class="news_title">
+                                    Lorem ipsum
+                                </p>
+                                <p class="news_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit ornare nisl,
+                                </p>
+                            </div>
+                            <div class="news_image_box">
+                                <img src="img/cards/Group 135-1.png" alt="" class="news_img">
+                            </div>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section class="profile-info">
+            <div class="profile-info_container container">
+                <div class="profile-info_box">
+                    <div class="profile_image_content">
+                        <a href="#" class="profile_edit_button">
+                            <svg class="edit_button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.8667 4.78672L17.2134 1.13339C16.7366 0.685516 16.1117 0.428533 15.4578 0.411324C14.8039 0.394115 14.1664 0.617881 13.6667 1.04005L1.6667 13.0401C1.23572 13.4747 0.967369 14.0443 0.906696 14.6534L0.333363 20.2134C0.315401 20.4087 0.340742 20.6055 0.407578 20.7899C0.474413 20.9743 0.581099 21.1416 0.720029 21.2801C0.844616 21.4036 0.992371 21.5014 1.15482 21.5677C1.31727 21.6341 1.49122 21.6677 1.6667 21.6667H1.7867L7.3467 21.1601C7.95576 21.0994 8.52541 20.831 8.96003 20.4001L20.96 8.40005C21.4258 7.90801 21.6775 7.2514 21.66 6.5741C21.6425 5.8968 21.3572 5.25406 20.8667 4.78672ZM16.3334 9.24005L12.76 5.66672L15.36 3.00005L19 6.64005L16.3334 9.24005Z" fill=""/>
+                            </svg>
+                                
+                        </a>
+                        <div class="profile_image_box">
+                            <img src="img/profile/Glass_Logo_Render 5.png" alt="" class="profile_image">
+                        </div>
+                    </div>
+                    <div class="profile_text-content">
+                        <h2>Личная информация</h2>
+                        <div class="profile_inputs">
+                            <div class="profile_input_box">
+                                <input type="text" name="" id="" class="profile_input_style" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+                                <label for="fname" id="placeholder-fname" class="placeholder-text">
+                                    <div class="text">Имя пользователя</div>
+                                </label>
+                            </div>
+
+                            <div class="profile_input_box">
+                                <input type="text" name="" id="" class="profile_input_style" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+                                <label for="fname" id="placeholder-fname" class="placeholder-text">
+                                    <div class="text">Имя пользователя</div>
+                                </label>
+                            </div>
+
+                            <div class="profile_input_box">
+                                <input type="text" name="" id="" class="profile_input_style" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+                                <label for="fname" id="placeholder-fname" class="placeholder-text">
+                                    <div class="text">Имя пользователя</div>
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" class="profile_button_content">
+                            <p>Редактировать профиль</p>
+                            <div class="profile_edit_image_box">
+                                <svg  class="profile_edit-icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.948 0.159096L13.8217 3.61591C14.0594 3.82804 14.0594 4.17196 13.8217 4.38409L9.948 7.8409C9.71029 8.05303 9.32489 8.05303 9.08718 7.8409C8.84947 7.62878 8.84947 7.28485 9.08718 7.07272L11.9218 4.54319H0V3.45681H11.9218L9.08718 0.927277C8.84947 0.715149 8.84947 0.371223 9.08718 0.159096C9.32489 -0.0530319 9.71029 -0.0530319 9.948 0.159096Z" fill=""/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="payment-info">
+            <div class="payment-info_container container">
+                <article class="payment_block">
+                    <h2>Счета</h2>
+                    <div class="payment_box">
+                        <div class="payment_header">
+                            <a href="profile_payment.html" class="header_text-content">
+                                <div class="payment_image_box">
+                                    <svg class="payment-icon" width="373" height="410" viewBox="0 0 373 410" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M217.856 261.141H0.121094V191.889H215.461C231.693 191.889 244.998 189.494 255.376 184.704C265.754 179.915 273.404 173.129 278.327 164.348C283.25 155.567 285.711 145.189 285.711 133.214C285.711 121.506 283.25 110.929 278.327 101.482C273.404 92.0355 265.887 84.5183 255.775 78.9302C245.663 73.3421 233.024 70.5481 217.856 70.5481H144.014V409.025H58.1971V0.298096H217.856C250.187 0.298096 277.861 6.08573 300.879 17.661C324.029 29.1033 341.725 44.8031 353.966 64.7604C366.206 84.5848 372.26 107.07 372.127 132.216C372.26 158.56 366.073 181.378 353.566 200.67C341.06 219.962 323.231 234.864 300.081 245.375C276.93 255.886 249.522 261.141 217.856 261.141ZM233.223 287.485V356.737H0.121094V287.485H233.223Z" fill=""/>
+                                    </svg>                                        
+                                </div>
+                                <div class="header_info">
+                                    <p class="payment_amount">
+                                        20 000,20 ₽
+                                    </p>
+                                    <div class="payment_name">
+                                        Citron Premium
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="header_image-content">
+                                <div class="arrow_image_box">
+                                    <img src="img/icons/Arrow-icon.svg" alt="" class="arrow_img">
+                                </div>
+                                <div class="header_card_images">
+                                    <div class="card_image_box">
+                                        <img src="img/cards/On-Front/Rectangle 14.png" alt="" class="card_image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment_cards">
+                            <a href="profile_card.html" class="card">
+                                <div class="card_image_box">
+                                    <img src="img/cards/On-Front/Rectangle 17.png" alt="" class="card_image">
+                                </div>
+                                <div class="card_info_content">
+                                    <p class="card_type">
+                                        Дебетовая карта
+                                    </p>
+                                    <p class="card_amount">
+                                        8 000,00 ₽
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="profile_card.html" class="card">
+                                <div class="card_image_box">
+                                    <img src="img/cards/On-Front/Rectangle 17.png" alt="" class="card_image">
+                                </div>
+                                <div class="card_info_content">
+                                    <p class="card_type">
+                                        Дебетовая карта
+                                    </p>
+                                    <p class="card_amount">
+                                        8 000,00 ₽
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="payment_box create_payment">
+                        <div class="payment_header">
+                            <div class="header_text-content">
+                                <div class="create_payment_image_box">
+                                    <svg class="create_payment-icon" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.38674 0.722656C8.52351 0.722656 7.82372 1.42245 7.82372 2.28568V8.53784H1.57163C0.708397 8.53784 0.00860596 9.23763 0.00860596 10.1009C0.00860596 10.9641 0.708399 11.6639 1.57163 11.6639H7.82372V17.9159C7.82372 18.7792 8.52351 19.479 9.38674 19.479C10.25 19.479 10.9498 18.7792 10.9498 17.9159V11.6639H17.2019C18.0651 11.6639 18.7649 10.9641 18.7649 10.1009C18.7649 9.23763 18.0651 8.53784 17.2019 8.53784H10.9498V2.28568C10.9498 1.42245 10.25 0.722656 9.38674 0.722656Z" fill=""/>
+                                    </svg>
+                                </div>
+                                <div class="header_info">
+                                    <p class="payment_title">
+                                        Создайте счёт
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="last-statistic_block">
+                    <h2>Последние операции</h2>
+                    <div class="last-statistic_content">
+                        <div class="last-statistic_box">
+                            <div class="statistic_header">
+                                <p>Сегодня</p>
+                            </div>
+                            <div class="statistic_info_box">
+                                <a href="#" class="statistic">
+                                    <div class="statistic_image_box">
+                                        <img src="img/statistic/magint.png" alt="" class="statistic_image">
+                                    </div>
+                                    <div class="statistic_text-content">
+                                        <div class="statistic_upper-text-content">
+                                            <p class="statistic-info_type">
+                                                Дебетовая карта
+                                            </p>
+                                            <div class="statistic-info_price">
+                                                54,24
+                                            </div>
+                                        </div>
+                                        <div class="statistic_bottom-text-content">
+                                            <p class="statistic-info_name">
+                                                Магнит
+                                            </p>
+                                            <p class="statistic-info_category">
+                                                Категория
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                                <a href="#" class="statistic">
+                                    <div class="statistic_image_box">
+                                        <img src="img/statistic/magint.png" alt="" class="statistic_image">
+                                    </div>
+                                    <div class="statistic_text-content">
+                                        <div class="statistic_upper-text-content">
+                                            <p class="statistic-info_type">
+                                                Дебетовая карта
+                                            </p>
+                                            <div class="statistic-info_price">
+                                                54,24
+                                            </div>
+                                        </div>
+                                        <div class="statistic_bottom-text-content">
+                                            <p class="statistic-info_name">
+                                                Магнит
+                                            </p>
+                                            <p class="statistic-info_category">
+                                                Категория
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                                <a href="#" class="statistic">
+                                    <div class="statistic_image_box">
+                                        <img src="img/statistic/magint.png" alt="" class="statistic_image">
+                                    </div>
+                                    <div class="statistic_text-content">
+                                        <div class="statistic_upper-text-content">
+                                            <p class="statistic-info_type">
+                                                Дебетовая карта
+                                            </p>
+                                            <div class="statistic-info_price">
+                                                54,24
+                                            </div>
+                                        </div>
+                                        <div class="statistic_bottom-text-content">
+                                            <p class="statistic-info_name">
+                                                Магнит
+                                            </p>
+                                            <p class="statistic-info_category">
+                                                Категория
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                                <a href="#" class="statistic">
+                                    <div class="statistic_image_box">
+                                        <img src="img/statistic/magint.png" alt="" class="statistic_image">
+                                    </div>
+                                    <div class="statistic_text-content">
+                                        <div class="statistic_upper-text-content">
+                                            <p class="statistic-info_type">
+                                                Дебетовая карта
+                                            </p>
+                                            <div class="statistic-info_price">
+                                                54,24
+                                            </div>
+                                        </div>
+                                        <div class="statistic_bottom-text-content">
+                                            <p class="statistic-info_name">
+                                                Магнит
+                                            </p>
+                                            <p class="statistic-info_category">
+                                                Категория
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                                <a href="#" class="statistic">
+                                    <div class="statistic_image_box">
+                                        <img src="img/statistic/magint.png" alt="" class="statistic_image">
+                                    </div>
+                                    <div class="statistic_text-content">
+                                        <div class="statistic_upper-text-content">
+                                            <p class="statistic-info_type">
+                                                Дебетовая карта
+                                            </p>
+                                            <div class="statistic-info_price">
+                                                54,24
+                                            </div>
+                                        </div>
+                                        <div class="statistic_bottom-text-content">
+                                            <p class="statistic-info_name">
+                                                Магнит
+                                            </p>
+                                            <p class="statistic-info_category">
+                                                Категория
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="statistic-info">
+            <div class="statistic-info_container container">
+                <h2>Статистика за октябрь</h2>
+                <div class="statistic-info_box">
+                    <div class="statistic_image_visualisation">
+
+                    </div>
+                    <div class="statistic_text-content">
+                        <div class="statistic_text-content_header">
+                            <a href="#" class="statistic_type">Расходы</a>
+                            <a href="#" class="statistic_type">Поступления</a>
+                        </div>
+                        <div class="statistic_content">
+                            <div class="statistic_label">
+                                <div class="statistic_name_box">
+                                    <span class="statistic_color"></span>
+                                    <p class="statistic_name">
+                                        Такси
+                                    </p>
+                                </div>
+                                <p class="statistic_amount">
+                                    2 953 ₽
+                                </p>
+                            </div>
+
+                            <div class="statistic_label">
+                                <div class="statistic_name_box">
+                                    <span class="statistic_color"></span>
+                                    <p class="statistic_name">
+                                        Такси
+                                    </p>
+                                </div>
+                                <p class="statistic_amount">
+                                    2 953 ₽
+                                </p>
+                            </div>
+
+                            <div class="statistic_label">
+                                <div class="statistic_name_box">
+                                    <span class="statistic_color"></span>
+                                    <p class="statistic_name">
+                                        Такси
+                                    </p>
+                                </div>
+                                <p class="statistic_amount">
+                                    2 953 ₽
+                                </p>
+                            </div>
+
+                            <div class="statistic_label">
+                                <div class="statistic_name_box">
+                                    <span class="statistic_color"></span>
+                                    <p class="statistic_name">
+                                        Питание
+                                    </p>
+                                </div>
+                                <p class="statistic_amount">
+                                    2 953 ₽
+                                </p>
+                            </div>
+
+                            <div class="statistic_label">
+                                <div class="statistic_name_box">
+                                    <span class="statistic_color"></span>
+                                    <p class="statistic_name">
+                                        Красота
+                                    </p>
+                                </div>
+                                <p class="statistic_amount">
+                                    29 423 ₽
+                                </p>
+                            </div>
+
+                            <div class="statistic_label">
+                                <div class="statistic_name_box">
+                                    <span class="statistic_color"></span>
+                                    <p class="statistic_name">
+                                        Другое
+                                    </p>
+                                </div>
+                                <p class="statistic_amount">
+                                    100 003 ₽
+                                </p>
+                            </div>
+                        </div>
+                        <div class="statistic_button_box">
+                            <a href="#" class="statistic_button">
+                                <p>Вся статистика</p>
+                                <div class="statistic_arrow_image_box">
+                                    <img src="img/icons/Arrow-icon.svg" alt="" class="statistic_arrow-icon">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="actions_block">
+            <div class="actions_container container">
+                <h2>Платежи и переводы</h2>
+                <div class="swiper actions_content">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper actions-wrapper">
+                      <!-- Slides -->
+                      <a href="#" class="swiper-slide action-slide">
+                        <div class="action_image_box">
+                            <svg class="action-icon" width="65" height="51" viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M62.6469 0.508057H3.21833C1.95405 0.508057 0.932617 1.52368 0.932617 2.78078V14.1444H64.9326V2.78078C64.9326 1.52368 63.9112 0.508057 62.6469 0.508057ZM0.932617 48.2353C0.932617 49.4924 1.95405 50.5081 3.21833 50.5081H62.6469C63.9112 50.5081 64.9326 49.4924 64.9326 48.2353V20.3944H0.932617V48.2353ZM42.2898 35.1671C42.2898 34.8546 42.5469 34.599 42.8612 34.599H54.6469C54.9612 34.599 55.2183 34.8546 55.2183 35.1671V40.2808C55.2183 40.5933 54.9612 40.849 54.6469 40.849H42.8612C42.5469 40.849 42.2898 40.5933 42.2898 40.2808V35.1671Z" fill=""/>
+                            </svg>
+                        </div>
+                        <p class="action_name">
+                            Перевод по карте
+                        </p>
+                      </a>
+
+                      <a href="#" class="swiper-slide action-slide">
+                        <div class="action_image_box">
+                            <svg class="action-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0ZM38.8004 35.5301L35.6004 32.3301L38.8004 29.1301C39.1004 30.1301 39.4004 31.2301 39.4004 32.3301C39.4004 33.4301 39.2004 34.5301 38.8004 35.5301ZM41.3004 26.7301L43.0004 24.9301C44.4004 27.0301 45.1004 29.6301 45.1004 32.2301C45.1004 34.8301 44.4004 37.5301 43.0004 39.6301L41.3004 37.9301C42.1004 36.2301 42.7004 34.3301 42.7004 32.3301C42.7004 30.3301 42.1004 28.4301 41.3004 26.7301ZM29.7004 18.3301L37.7004 26.3301L31.7004 32.3301L37.7004 38.3301L29.7004 46.3301H28.3004V35.7301L21.9004 42.1301L19.9004 40.1301L27.7004 32.3301L19.9004 24.5301L21.9004 22.5301L28.3004 28.9301V18.3301H29.7004ZM33.8004 26.3301L31.1004 23.6301V29.0301L33.8004 26.3301ZM31.1004 41.0301L33.8004 38.3301L31.1004 35.7301V41.0301Z" fill=""/>
+                            </svg>
+                        </div>
+                        <p class="action_name">
+                            Переводы рядом
+                        </p>
+                      </a>
+
+                      <a href="#" class="swiper-slide action-slide">
+                        <div class="action_image_box">
+                            <svg class="action-icon" width="64" height="85" viewBox="0 0 64 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M63.5778 23.1979C63.3778 22.7109 63.1333 22.2461 62.8 21.8477L44.1778 1.54948C43.7556 1.08464 43.2444 0.752604 42.6889 0.464843C42.0444 0.132812 41.3333 0 40.5778 0H5.04444C2.28889 0 0 2.34635 0 5.29037V79.4883C0 82.4544 2.28889 85 5.04444 85H59.0667C61.8222 85 64 82.4544 64 79.4883V25.4557C64 24.6589 63.8889 23.8841 63.5778 23.1979ZM10.6667 25.2786C10.6667 24.9466 11.0667 24.8138 11.4222 24.8138H27.1556C27.5111 24.8138 27.7778 24.9466 27.7778 25.2786V27.6693C27.7778 27.9792 27.5333 28.3555 27.1556 28.3555H11.4222C11.0667 28.3555 10.6667 27.9792 10.6667 27.6693V25.2786ZM10.6667 53.612C10.6667 53.28 11.0667 53.1471 11.4222 53.1471H38.5778C38.9333 53.1471 39.1111 53.28 39.1111 53.612V56.0026C39.1111 56.3125 38.9556 56.6888 38.5778 56.6888H11.4222C11.0667 56.6888 10.6667 56.3125 10.6667 56.0026V53.612ZM46.2222 70.1693C46.2222 70.4792 46.0667 70.8555 45.6889 70.8555H11.4222C11.0667 70.8555 10.6667 70.4792 10.6667 70.1693V67.7786C10.6667 67.4466 11.0667 67.3138 11.4222 67.3138H45.6889C46.0444 67.3138 46.2222 67.4466 46.2222 67.7786V70.1693ZM53.3333 41.8359C53.3333 42.1458 53.1778 42.5221 52.8 42.5221H11.4222C11.0667 42.5221 10.6667 42.1458 10.6667 41.8359V39.4453C10.6667 39.1133 11.0667 38.9805 11.4222 38.9805H52.8C53.1556 38.9805 53.3333 39.1133 53.3333 39.4453V41.8359ZM42.9111 25.0352C41.6667 25.0352 40.4444 23.8841 40.4444 22.5339V7.92448L56.2667 25.0352H42.9111Z" fill=""/>
+                            </svg>
+                                
+                        </div>
+                        <p class="action_name">
+                            Перевод по договору
+                        </p>
+                      </a>
+
+                      <a href="#" class="swiper-slide action-slide">
+                        <div class="action_image_box">
+                            <svg class="action-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0C14.3271 0 0 14.3269 0 32C0 49.6731 14.3271 64 32 64C49.6729 64 64 49.6731 64 32C64 14.3269 49.6729 0 32 0ZM29.4727 35.6465H33.8086C35.668 35.6465 37.2773 35.3379 38.6367 34.7207C39.9961 34.1035 41.043 33.2285 41.7773 32.0957C42.5117 30.9629 42.875 29.623 42.8672 28.0762C42.875 26.5996 42.5195 25.2793 41.8008 24.1152C41.082 22.9434 40.043 22.0215 38.6836 21.3496C37.332 20.6699 35.707 20.3301 33.8086 20.3301H24.4336V31.5801H21.0234V35.6465H24.4336V37.1934H21.0234V41.2598H24.4336V44.3301H29.4727V41.2598H34.7109V37.1934H29.4727V35.6465ZM29.4727 31.5801H33.668C34.6211 31.5801 35.4023 31.4395 36.0117 31.1582C36.6211 30.877 37.0703 30.4785 37.3594 29.9629C37.6484 29.4473 37.793 28.8379 37.793 28.1348C37.793 27.4473 37.6484 26.8262 37.3594 26.2715C37.0703 25.7168 36.6289 25.2754 36.0352 24.9473C35.4414 24.6191 34.6992 24.4551 33.8086 24.4551H29.4727V31.5801Z" fill=""/>
+                            </svg>
+                        </div>
+                        <p class="action_name">
+                            Перевод между счетами
+                        </p>
+                      </a>
+
+                      <a href="#" class="swiper-slide action-slide">
+                        <div class="action_image_box">
+                            <svg class="action-icon" width="122" height="112" viewBox="0 0 122 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M47.9596 54.5081L0.926764 27.5081L47.9596 0.508057L47.9596 13.4211H121.927V22.8315V32.1846V41.595H47.9596L47.9596 54.5081ZM74.8939 57.5081L121.927 84.5081L74.8939 111.508L74.8939 98.595L0.926758 98.595L0.926759 89.1846L0.926759 79.8315L0.92676 70.4211H74.8939V57.5081Z" fill=""/>
+                            </svg>
+                        </div>
+                        <p class="action_name">
+                            Перевод по реквизитам
+                        </p>
+                      </a>
+
+                      <a href="#" class="swiper-slide action-slide">
+                        <div class="action_image_box">
+                            <svg class="action-icon" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.97188 14.6752C11.5782 9.59724 16.8221 5.7636 22.9336 3.94421C21.5146 5.4563 20.2606 7.33035 19.1985 9.43589C18.3957 11.0274 17.6833 12.784 17.075 14.6752H7.97188ZM6.23389 17.45C4.23761 21.0909 3.02086 25.22 2.80825 29.6126H14.6905C14.7892 25.2762 15.348 21.1587 16.2821 17.45H6.23389ZM19.1492 17.45C18.1719 21.0845 17.5709 25.2093 17.466 29.6126H29.6123V17.45H19.1492ZM32.387 17.45V29.6126H44.533C44.4282 25.2093 43.8272 21.0845 42.8498 17.45H32.387ZM29.6123 32.3874H17.466C17.5709 36.7906 18.1719 40.9154 19.1492 44.5499H29.6123V32.3874ZM32.387 44.5499V32.3874H44.5331C44.4282 36.7906 43.8272 40.9154 42.8499 44.5499H32.387ZM29.6123 47.3247H20.0006C20.4993 48.7597 21.0609 50.0952 21.6759 51.3145C23.9371 55.7972 26.7527 58.4248 29.6123 59.0689V47.3247ZM32.387 59.0689V47.3247H41.9985C41.4998 48.7597 40.9382 50.0952 40.3231 51.3145C38.062 55.797 35.2466 58.4246 32.387 59.0689ZM32.387 14.6752V2.93118C35.2466 3.57548 38.062 6.20303 40.3231 10.6856C40.9382 11.9048 41.4997 13.2402 41.9984 14.6752H32.387ZM29.6123 2.93112V14.6752H20.0007C20.4994 13.2402 21.0609 11.9048 21.6759 10.6856C23.9371 6.20289 26.7527 3.57531 29.6123 2.93112ZM45.717 17.45C46.6511 21.1587 47.2099 25.2762 47.3085 29.6126H59.1918C58.9792 25.22 57.7624 21.0909 55.7662 17.45H45.717ZM54.0282 14.6752H44.9241C44.3157 12.784 43.6034 11.0274 42.8005 9.43589C41.7384 7.33016 40.4843 5.45596 39.0651 3.9438C45.1772 5.76303 50.4216 9.59686 54.0282 14.6752ZM14.6905 32.3874C14.7891 36.7237 15.3479 40.8412 16.282 44.5499H6.2338C4.23756 40.909 3.02084 36.7799 2.80824 32.3874H14.6905ZM17.075 47.3247H7.97176C11.5781 52.4027 16.822 56.2364 22.9336 58.0558C21.5146 56.5438 20.2606 54.6697 19.1985 52.5642C18.3957 50.9726 17.6833 49.216 17.075 47.3247ZM42.8005 52.5642C43.6034 50.9726 44.3158 49.216 44.9241 47.3247H54.0283C50.4217 52.4031 45.1773 56.237 39.0651 58.0563C40.4843 56.5441 41.7384 54.6699 42.8005 52.5642ZM59.1918 32.3874C58.9792 36.7799 57.7625 40.909 55.7663 44.5499H45.7171C46.6511 40.8412 47.2099 36.7237 47.3085 32.3874H59.1918ZM31 0C13.8792 0 0 13.8792 0 31C0 48.1209 13.8792 62.0001 31 62.0001C48.1209 62.0001 62.0001 48.1209 62.0001 31C62.0001 13.8792 48.1209 0 31 0Z" fill=""/>
+                            </svg>
+                        </div>
+                        <p class="action_name">
+                            SWIFT переводы
+                        </p>
+                      </a>
+                    </div>
+                
+                    <div class="swiper-button-prev action-btn-prev"></div>
+                    <div class="swiper-button-next action-btn-next"></div>
+                    <span class="preview_gradient"></span>
+                  </div>
+                  
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer_container container">
+            <div class="logotype_box">
+                <img src="img/logos/Citron Bank_Full Logotype.svg" alt="" class="logotype_img">
+            </div>
+            <div class="social-media_block">
+                <a href="#" class="social-media_box">
+                    <svg class="social-media_icon" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7398 1.27765C18.8693 0.851629 18.7398 0.537964 18.1195 0.537964H16.0713C15.5501 0.537964 15.3098 0.808715 15.1794 1.10756C15.1794 1.10756 14.1378 3.60128 12.6623 5.2211C12.1848 5.69082 11.9679 5.83985 11.7073 5.83985C11.577 5.83985 11.3811 5.69082 11.3811 5.26402V1.27765C11.3811 0.765801 11.2376 0.537964 10.8037 0.537964H7.58281C7.25744 0.537964 7.0616 0.775164 7.0616 1.00066C7.0616 1.4852 7.79972 1.59756 7.87541 2.96146V5.9249C7.87541 6.57486 7.75603 6.69268 7.49542 6.69268C6.80099 6.69268 5.11172 4.18725 4.10908 1.32057C3.9148 0.762679 3.71817 0.537964 3.19461 0.537964H1.14486C0.559666 0.537964 0.442627 0.808715 0.442627 1.10756C0.442627 1.63969 1.13706 4.28323 3.67682 7.77958C5.36999 10.1672 7.75369 11.4616 9.92516 11.4616C11.2274 11.4616 11.3882 11.1745 11.3882 10.679V8.87429C11.3882 8.29924 11.5114 8.18454 11.9242 8.18454C12.2285 8.18454 12.7489 8.33435 13.9646 9.48524C15.3534 10.8499 15.5821 11.4616 16.3639 11.4616H18.4121C18.9973 11.4616 19.2907 11.1745 19.1221 10.6065C18.9364 10.0416 18.2732 9.22151 17.3938 8.24852C16.9163 7.69453 16.2 7.09763 15.9823 6.79879C15.6788 6.41568 15.7654 6.24481 15.9823 5.90383C15.9823 5.90383 18.4792 2.45039 18.739 1.27765H18.7398Z" fill=""/>
+                    </svg>
+                </a>
+                <a href="#" class="social-media_box">
+                    <svg class="social-media_icon" width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5937 2.29628C20.4789 1.89465 20.2551 1.53102 19.9463 1.24407C19.6288 0.948293 19.2396 0.736717 18.8155 0.629311C17.2283 0.219196 10.8692 0.219196 10.8692 0.219196C8.21817 0.189629 5.5678 0.319674 2.93304 0.608598C2.50892 0.723939 2.12046 0.940242 1.8022 1.23827C1.48948 1.53322 1.26298 1.89694 1.14465 2.29545C0.860418 3.79651 0.722316 5.32065 0.732211 6.84732C0.722069 8.37261 0.859832 9.89625 1.14465 11.3992C1.26044 11.796 1.4861 12.1581 1.79966 12.4506C2.11322 12.743 2.50369 12.9543 2.93304 13.0662C4.5414 13.4754 10.8692 13.4754 10.8692 13.4754C13.5236 13.505 16.1773 13.375 18.8155 13.086C19.2396 12.9786 19.6288 12.7671 19.9463 12.4713C20.255 12.1844 20.4785 11.8207 20.5929 11.4191C20.8845 9.91858 21.0264 8.39382 21.0163 6.86637C21.0382 5.33246 20.8966 3.80051 20.5937 2.29545V2.29628ZM8.84754 9.68415V4.01131L14.1383 6.84815L8.84754 9.68415Z" fill=""/>
+                    </svg>
+                </a>
+                <a href="#" class="social-media_box">
+                    <svg class="social-media_icon" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.1385 2.48879C17.487 2.77749 16.7871 2.97256 16.0513 3.06073C16.8105 2.60645 17.3785 1.89148 17.6493 1.04921C16.936 1.47288 16.1554 1.77111 15.3413 1.93091C14.7938 1.34639 14.0687 0.958954 13.2785 0.828766C12.4883 0.698577 11.6772 0.832915 10.9712 1.21092C10.2652 1.58893 9.70371 2.18946 9.37395 2.91927C9.04419 3.64908 8.96461 4.46735 9.14755 5.24702C7.70226 5.17446 6.28838 4.7988 4.99767 4.14444C3.70695 3.49008 2.56825 2.57163 1.65547 1.4487C1.34337 1.98709 1.1639 2.6113 1.1639 3.27608C1.16356 3.87454 1.31093 4.46383 1.59295 4.99167C1.87498 5.51951 2.28293 5.96958 2.78061 6.30194C2.20343 6.28357 1.63899 6.12762 1.13425 5.84705V5.89386C1.1342 6.73322 1.42454 7.54675 1.95601 8.19641C2.48749 8.84608 3.22737 9.29185 4.0501 9.4581C3.51467 9.60301 2.95331 9.62435 2.40842 9.52052C2.64055 10.2427 3.09271 10.8743 3.70161 11.3268C4.3105 11.7792 5.04565 12.03 5.80413 12.0439C4.51656 13.0547 2.92643 13.6029 1.28953 13.6005C0.999567 13.6006 0.709851 13.5837 0.421875 13.5498C2.08343 14.6181 4.01759 15.1851 5.99295 15.1829C12.6798 15.1829 16.3353 9.64458 16.3353 4.84129C16.3353 4.68523 16.3314 4.52762 16.3244 4.37157C17.0355 3.85736 17.6492 3.2206 18.137 2.49114L18.1385 2.48879Z" fill=""/>
+                    </svg>
+                </a>
+            </div>
+            <div class="contacts_block">
+                <p class="number_phone">
+                    +8 900 000 00 00
+                </p>
+                <p class="contacts_text">
+                    Связаться с нами
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
